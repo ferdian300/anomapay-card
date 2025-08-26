@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700;900&display=swap');
+
+body {
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  background: linear-gradient(135deg, #9b7171 0%, #2d2d2d 50%, #1a1a1a 100%);
+  min-height: 100vh;
+}
+
+/* Card styles for 320x192 size */
+.card-export {
+  background: linear-gradient(135deg, #000000 0%, #991b1b 100%);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  min-width: 320px;
+  min-height: 192px;
+  max-width: 320px;
+  max-height: 192px;
+}
+
+.card-logo {
+  background: rgb(39, 31, 31);
+  border-radius: 50%;
+  padding: 1px;
+  box-shadow: 0 4px 8px rgba(197, 0, 0, 0.2);
+  min-width: 48px;
+  min-height: 48px;
+  max-width: 48px;
+  max-height: 48px;
+  border: 2px solid rgb(255, 0, 0);
+}
+
+.card-text {
+  text-shadow: 0 4px 4px rgba(54, 24, 185, 0.3);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 900;
+}
+
+/* Button hover effects */
+.btn-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Input focus effects */
+.input-focus:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.3);
+}
+
+/* Ensure proper sizing for PNG export */
+.card-export img {
+  max-width: none;
+  max-height: none;
+  object-fit: cover;
+}
+
+/* Card content positioning */
+.card-export > * {
+  position: relative;
+  z-index: 2;
+}
